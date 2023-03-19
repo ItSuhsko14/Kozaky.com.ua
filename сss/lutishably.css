@@ -1,0 +1,44 @@
+.shably-wrapper {
+	width: 100%;
+	display: grid;
+}
+
+.shably-photo img {
+	width: 100%;
+}
+
+.shably-text {
+	width: ;
+}
+
+/* Екран до 321 */
+@media screen and (max-width: 320px) {
+.shably-wrapper {
+	grid-template-columns: repeat(1, 100%);
+	}
+}
+
+
+/* Екран від 321 до 920 пікс книжкова орієнтація */
+@media (min-width: 321px) and (max-width: 920px)  and (orientation: portrait){
+.shably-wrapper {
+	grid-template-columns: repeat(1, 100%);
+	grid-gap: 0%;
+	}
+}
+
+/* Екран від 321 до 920 пікс альбомна */
+@media (min-width: 321px) and (max-width: 920px) and (orientation: landscape) {
+.shably-wrapper {
+	grid-template-columns: repeat(2, 50%);
+	grid-gap: 1%;
+ 	}
+}
+
+/* Екран від 920 пікс */
+@media (min-width: 921px) {
+.shably-wrapper {
+	grid-template-columns: repeat(4, 24%);
+	grid-gap: 1%;
+	}
+}

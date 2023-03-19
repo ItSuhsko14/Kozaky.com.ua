@@ -1,0 +1,163 @@
+/* --- Hamburger menu --- */
+
+/* Обгортка меню */
+.menu-wrapper {
+	display: flex;
+	position: relative;
+	top: 0;
+	height: 2.5em;
+	width: 100vw;
+	padding: 0;
+	border: 0px solid blue;
+}
+
+.header-title {
+	margin: 0 auto;
+	padding: 0 3em;
+	width: 80vw;
+	position:relative;
+	font-family: Alegreya Sans;
+	font-size: 3vw;
+	text-align: center;
+	vertical-align: middle;
+	border: 0px solid black;
+
+}
+
+/* Верхній напис Люті козаки на екрані до 320пікс*/
+@media screen and (max-width: 320px) {
+	.header-title {
+		font-size: 12px;
+	}
+
+	.menu-container {
+		top: -20em;
+	}
+}
+@media screen and (max-width: 920px) {
+/* Розмір екрана до 920пікс*/
+	
+	/* Design of menu */
+	.menu-container {
+	position: absolute;
+	padding: 0.5em 0 0.3em 5vw;
+	margin: 0 auto;
+	top: -20em;
+	width: 100vw;
+	height: auto;
+	background: #E2E1E1;
+	transition: 0.5s;
+	list-style: none;
+	font-size: 1em; 
+	z-index: 800;
+}	
+	
+}
+
+/* Розмір екрана більше 920px */
+@media screen and (min-width: 920px) {
+	.header-title {
+		font-size: 35px;
+	}
+
+	.label-menu{
+		display: none;
+	}
+
+	.menu-container {
+		position: relative;
+		border: 0px solid black;
+		margin: 0 auto;
+	}
+
+	.menu-box {
+		position: relative;
+		width: 100%;
+		height: 100px;
+		margin: 0 auto;
+		border: 0px solid black;
+	}
+
+	.menu-box li {
+		display: inline-block;
+		font-size: 1.5em;
+	}
+}
+
+#burger {
+	opacity: 0;
+}
+
+/* стиль Label */
+/* при розмірі екрана до 920пікс*/
+@media screen and (max-width: 920px) {
+	.label-menu {
+	  display: flex;
+	  align-items: center;
+	  position: absolute;
+	  top: 0vw;
+	  right: 0vw;
+	  width: 100vw;
+	  height: 2.5em;
+	  cursor: pointer;
+	  z-index: 880;
+	  border: 0px solid red;
+	}
+
+	.label-menu > span,
+	.label-menu > span::before,
+	.label-menu > span::after	{
+		display: block;
+		position: absolute;
+		width: 2em;
+		height: 0.2em;
+		background: black;
+		transition-duration: 0.5s;
+	}
+
+	.label-menu > span {
+		right: 5vw;
+	}
+
+	.label-menu > span::before {
+		content: "";
+		top: -0.6em;
+		border: 0px solid red;
+		padding: 0;
+	}
+
+	.label-menu >::after	{
+		content: "";
+		top: 0.6em;
+		border: 0px solid green;
+	}
+
+	#burger:checked + label + div {
+		top: 2.5em;
+	}
+
+	/* transform button */
+
+	#burger:checked ~ .label-menu > span {
+		transform: rotate(45deg);
+	}
+
+	#burger:checked ~ .label-menu > span::before {
+		top: 0;
+		transform: rotate(-90deg);
+	}
+
+	#burger:checked ~ .label-menu > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+}
+
+
+
+
+.menu-container li {
+	padding: 0.2em;
+	margin: 0;
+	list-style: none;
+}

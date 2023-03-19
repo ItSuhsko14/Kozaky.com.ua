@@ -1,0 +1,43 @@
+.main-poslugi {
+	display: grid;
+	justify-content: center;
+	border: 0px solid black;
+	margin: 1.5vw 0 1.5vw 0;
+
+}
+
+.main-poslugi img {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 320px) {
+.main-poslugi {
+	grid-template-columns: repeat(1, 100%);
+	grid-gap: 2vw;
+	}
+.mytext {
+	color: red;
+ }
+}
+
+@media (min-width: 321px) and (max-width: 920px) {
+.main-poslugi {
+	grid-template-columns: repeat(2, 49%);
+	grid-gap: 1.5vw;
+	}
+	.mytext {
+	color: blue;
+ }
+}
+
+@media (min-width: 921px) {
+.main-poslugi {
+	grid-template-columns: repeat(4, 24%);
+	grid-gap: 2%;
+	}
+	.mytext {
+	color: green;
+ }
+}
+

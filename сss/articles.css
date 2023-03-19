@@ -1,0 +1,58 @@
+.article-wrapper {
+	width: 100%;
+	margin-bottom: 2em;
+}
+.article-date {
+	text-align: left;
+	font-size: 1em;
+}
+
+.article-title {
+	font-size: 1.5em;
+	text-align: left;
+	font-weight: 700;
+}
+
+.article-photo {
+	margin: 0 auto;
+}
+
+.art-img {
+	width: 100%;
+}
+
+.news-wrapper {
+	width: 100%;
+	display: grid;
+}
+
+/* Екран до 321 */
+@media screen and (max-width: 320px) {
+.news-wrapper {
+	grid-template-columns: repeat(1, 100%);
+	}
+}
+
+/* Екран від 321 до 920 пікс книжкова орієнтація */
+@media (min-width: 321px) and (max-width: 920px)  and (orientation: portrait){
+.news-wrapper {
+	grid-template-columns: repeat(1, 100%);
+	grid-gap: 0%;
+	}
+}
+
+/* Екран від 321 до 920 пікс альбомна */
+@media (min-width: 321px) and (max-width: 920px) and (orientation: landscape) {
+.news-wrapper {
+	grid-template-columns: repeat(2, 50%);
+	grid-gap: 1%;
+	}
+}
+
+/* Екран від 920 пікс */
+@media (min-width: 921px) {
+.news-wrapper {
+	grid-template-columns: repeat(4, 24%);
+	grid-gap: 1%;
+	}
+}

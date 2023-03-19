@@ -1,0 +1,196 @@
+
+.container {
+	position: absolute;
+	border: 1px solid black;
+	width: 600px;
+	height: 650px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+.game-field {
+	display: flex;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 3px solid red;
+	z-index: 1;
+}
+
+.ppp {
+	color: red;
+	font-weight: bold;
+}
+
+.score-red {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	top: 0;
+	left: 0;
+	color: red;
+	
+}
+
+.score-blue {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: blue;
+	width: 50%;
+	
+}
+
+.brick-blue {
+	width: 20px;
+	height: 20px;
+	background: blue;
+}
+
+.brick-red {
+	width: 20px;
+	height: 20px;
+	background: red;
+}
+
+.target	{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	left: 60%;
+	top: 40%;
+	background: yellow;
+	z-index: 2;
+}
+
+#pacman {
+	position: absolute;
+	border: 0px solid black;
+	z-index: 3;
+}
+
+#pacman2 {
+	position: absolute;
+	border: 0px solid black;
+	z-index: 3;
+}
+
+#pacman3 {
+	position: absolute;
+	border: 0px solid black;
+	z-index: 3;
+}
+
+.ball {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	z-index: 3;
+}
+
+.ball2 {
+	position: absolute;
+	right: 0%;
+	bottom: 0%;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	z-index: 3;	
+}
+
+.ball3 {
+	position: absolute;
+	left: 0%;
+	bottom: 0%;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	z-index: 3;	
+}
+
+.buttons-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	font-size: 50px;
+	font-weight: 900;
+}
+
+.btn-left, .btn-right, .btn-up, .btn-down {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: grey;
+	cursor: pointer;
+}
+
+.btn-left {
+	left: -60px;
+	top: 45%;
+}
+
+.btn-right {
+	left: 10px;
+	top: 45%;
+}
+
+.btn-up {
+	left: -25px;
+	top: 38%;
+}
+
+.btn-down {
+	left: -25px;
+	top: 52%;
+}
+
+.button-start {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 95%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 50px;
+	background: grey;
+	font-size: 50px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 50px;
+	background: yellow;
+	z-index: 10;
+	font-size: 50px;
+	text-align: center;
+}
+
+.modal.active {
+	display: block;
+}
