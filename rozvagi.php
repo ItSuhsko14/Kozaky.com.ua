@@ -192,7 +192,7 @@
 
 
 		<!-- Вставка footer.php -->
-		<?
+		<?php
 			include('footer.php')
 		?>
 		

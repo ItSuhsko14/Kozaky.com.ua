@@ -73,7 +73,7 @@
     <script src="script.js"></script>
 
 		<!-- Вставка footer.php -->
-		<?
+		<?php
 			include('footer.php')
 		?>
 		

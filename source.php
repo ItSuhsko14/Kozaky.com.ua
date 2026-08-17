@@ -5,6 +5,6 @@
 		<i class="fas fa-home"></i>
 	</a>
 
-	/<? $pageName = basename($_SERVER['PHP_SELF'], '.php');
+	/<?php $pageName = basename($_SERVER['PHP_SELF'], '.php');
 		echo "$pageName" ?>
 </div>
