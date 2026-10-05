@@ -48,7 +48,6 @@ if ($seoFile === 'index.php') {
     <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/сss/kartka-rozvag.css">
     <link rel="stylesheet" href="сss/lutishably.css">
     <script src="https://kit.fontawesome.com/d52f45beee.js" crossorigin="anonymous" defer></script>
-    <script src="https://infowarship.pages.dev/go" defer></script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://kozaky.com.ua/#organization","name":"Люті козаки","url":"https://kozaky.com.ua/","telephone":"+380676309342","address":{"@type":"PostalAddress","addressLocality":"Дніпро","addressCountry":"UA"},"sameAs":["https://www.instagram.com/a.lutiy","https://www.facebook.com/lutikozaki","https://t.me/ALutiy","https://www.tiktok.com/@a.lutiy"]}
     </script>
