@@ -20,37 +20,22 @@
 
 <div class="wrapper">
 	<div class="text">
-		<h1> Лучний тир </h1>
-		<p>
-			Лучний тир - одна з найбільш цікавих розваг, які постійно користуються популярністю серед гостей свята.
-		</p>
-		<p>
-			Ми привозимо конструкцію мішені, луки і стріли. Козак-інструктор навчає всіх бажаючих стріляти і дає моажливості спробувати свої сили.
-		</p>
-		<p>
-			Вікова категорія: від 6 років.<br>
-			Пропускна здатність: 30-40 людей на годину.
-		</p>
+		<h1>Виїзний лучний тир «Люті козаки»</h1>
+		<p>«Люті козаки» привозять лучний тир на свята та події. Ми доставляємо й монтуємо обладнання, а інструктор допомагає гостям спробувати стрільбу з лука. Атракціон можна провести в козацькому стилі або без тематичного оформлення.</p>
+		<p>Стандартна тривалість роботи тиру — 2 години, але ми можемо працювати стільки, скільки вам необхідно. У послугу входять доставка, монтаж, усе необхідне обладнання та робота інструктора. Вікових обмежень немає: долучитися можуть і діти, і дорослі.</p>
+		<p>Для встановлення потрібен майданчик, де є достатньо місця для безпечного польоту стріли. Виїжджаємо до Дніпра, Києва та інших міст.</p>
+
+		<h2>Замовити лучний тир у своєму місті</h2>
+		<p>Оберіть сторінку міста, щоб дізнатися про виїзний лучний тир у Дніпрі або Києві.</p>
+		<div class="button-wrapper">
+			<a href="luchniy-dnipro.php"><div class="link-btn">Лучний тир у Дніпрі</div></a>
+			<a href="luchniy-kyiv.php"><div class="link-btn">Лучний тир у Києві</div></a>
+		</div>
 
 	<div class="swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<img src="img/rozvagi/
-				luchniy2.jpg 
-				" alt="лучний тир">	
-			</div>
-			<div class="swiper-slide">
-				<img src="img/rozvagi/
-				luchniy2.jpg 
-				" alt="
-				лучний тир
-				">
-			</div>
-			<div class="swiper-slide">
-				<img src="img/rozvagi/luchniy3.jpg" alt="
-				лучний тир
-				">	
-			</div>
+			<div class="swiper-slide"><img src="img/rozvagi/luchniy2.jpg" alt="Виїзний лучний тир колективу «Люті козаки»"></div>
+			<div class="swiper-slide"><img src="img/rozvagi/luchniy3.jpg" alt="Стрільба з лука у виїзному лучному тирі"></div>
 		</div>
 
 		<!-- navigation buttons -->
@@ -61,6 +46,14 @@
 	  	<div class="swiper-pagination"></div>
 
 		
+	</div>
+		<h2>Як замовити</h2>
+		<p>Напишіть нам у Telegram або Viber, щоб обговорити дату та місце проведення.</p>
+		<div class="button-wrapper">
+			<a href="https://t.me/ALutiy" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити в Telegram</div></a>
+			<a href="https://viber.click/380676309342" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити у Viber</div></a>
+		</div>
+	</div>
 	</div>
 		<!-- Вставка footer.php -->
 		<?php

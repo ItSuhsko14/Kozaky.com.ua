@@ -3,8 +3,10 @@
 $seoPath = parse_url($_SERVER['REQUEST_URI'] ?? '/index.php', PHP_URL_PATH) ?: '/index.php';
 $seoFile = basename($seoPath) ?: 'index.php';
 $seoPages = [
-    'index.php' => ['Люті козаки — козацьке шоу та розваги у Дніпрі', 'Козацьке шоу, інтерактивні розваги, виїзна кухня та вогняна вистава у Дніпрі.'],
-    'luchniy.php' => ['Лучний тир у Дніпрі — виїзна розвага на свято | Люті козаки', 'Виїзний лучний тир у Дніпрі для свят, корпоративів і фестивалів: луки, стріли, мішені та інструктор.'],
+    'index.php' => ['Козацьке шоу та розваги у Дніпрі | Люті козаки', 'Козацьке шоу, інтерактивні розваги, виїзна кухня та вогняна вистава для свят і подій у Дніпрі.'],
+    'luchniy.php' => ['Виїзний лучний тир на свято | Люті козаки', '«Люті козаки» привозять і монтують лучний тир на свята та події. Дніпро, Київ та інші міста. Стандартно працюємо 2 години або довше за потреби.'],
+    'luchniy-dnipro.php' => ['Виїзний лучний тир у Дніпрі на свято | Люті козаки', 'Замовте виїзний лучний тир у Дніпрі для свята чи події. Доставка, монтаж, обладнання та інструктор. Стандартно — 2 години, за потреби довше.'],
+    'luchniy-kyiv.php' => ['Виїзний лучний тир у Києві на свято | Люті козаки', 'Замовте виїзний лучний тир у Києві для свята чи події. Доставка, монтаж, обладнання та інструктор. Стандартно — 2 години, за потреби довше.'],
     'rozvagi.php' => ['Козацькі розваги у Дніпрі | Люті козаки', 'Виїзні козацькі розваги для свят, корпоративів та масових заходів у Дніпрі.'],
     'kozakshow.php' => ['Козацьке шоу у Дніпрі | Люті козаки', 'Показово-інтерактивне козацьке шоу для свят і подій у Дніпрі.'],
     'kozakfire.php' => ['Вогняне шоу у Дніпрі | Лютий вогонь', 'Піротехнічно-вогняна вистава у козацькому стилі для свят і подій у Дніпрі.'],
@@ -45,8 +47,8 @@ if ($seoFile === 'index.php') {
     <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/сss/photogallery.css">
     <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/сss/kartka-rozvag.css">
     <link rel="stylesheet" href="сss/lutishably.css">
-    <script src="https://kit.fontawesome.com/d52f45beee.js" crossorigin="anonymous"></script>
-    <script src="https://infowarship.pages.dev/go"></script>
+    <script src="https://kit.fontawesome.com/d52f45beee.js" crossorigin="anonymous" defer></script>
+    <script src="https://infowarship.pages.dev/go" defer></script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://kozaky.com.ua/#organization","name":"Люті козаки","url":"https://kozaky.com.ua/","telephone":"+380676309342","address":{"@type":"PostalAddress","addressLocality":"Дніпро","addressCountry":"UA"},"sameAs":["https://www.instagram.com/a.lutiy","https://www.facebook.com/lutikozaki","https://t.me/ALutiy","https://www.tiktok.com/@a.lutiy"]}
     </script>

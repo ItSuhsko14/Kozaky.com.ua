@@ -1,0 +1,44 @@
+<?php
+	include('head.php');
+?>
+
+<body>
+	<?php include('menu.php'); ?>
+	<?php include('contacts.php'); ?>
+
+	<div class="wrapper">
+		<div class="text">
+			<h1>Виїзний лучний тир у Дніпрі</h1>
+			<p>Шукаєте активну розвагу для свята чи події у Дніпрі? Люті козаки привезуть, змонтують лучний тир на вашому майданчику. Гості зможуть спробувати стрільбу з лука, а інструктор допоможе долучитися до атракціону.</p>
+			<p>Це виїзний формат: тир встановлюємо на місці проведення події.</p>
+			<h2>Що входить у послугу</h2>
+			<p>У послугу входять доставка, монтаж, усе необхідне обладнання та робота інструктора. Стандартна тривалість роботи тиру — 2 години. Але також ми можемо працювати стільки, скільки вам необхідно.</p>
+			<p>Вікових обмежень немає: спробувати стрільбу можуть діти й дорослі. Для встановлення тиру підійде майданчик, де достатньо місця для безпечного польоту стріли. Обмежень за кількістю учасників немає.</p>
+
+			<h2>Майданчик та учасники</h2>
+			<p>Вікових обмежень і ліміту на кількість учасників немає: спробувати стрільбу можуть діти й дорослі. Для встановлення тиру потрібен майданчик, де достатньо місця для безпечного польоту стріли.</p>
+
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/rozvagi/luchniy2.jpg" alt="Виїзний лучний тир колективу «Люті козаки»"></div>
+					<div class="swiper-slide"><img src="img/rozvagi/luchniy3.jpg" alt="Стрільба з лука у виїзному лучному тирі"></div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<h2>Замовити лучний тир у Дніпрі</h2>
+			<p>Напишіть нам у Telegram або Viber, щоб обговорити дату й місце проведення події.</p>
+			<div class="button-wrapper">
+				<a href="https://t.me/ALutiy" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити в Telegram</div></a>
+				<a href="https://viber.click/380676309342" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити у Viber</div></a>
+			</div>
+
+			<p><a href="luchniy.php">Дізнатися більше про виїзний лучний тир</a> · <a href="luchniy-kyiv.php">Лучний тир у Києві</a></p>
+		</div>
+	</div>
+
+	<?php include('footer.php'); ?>
+</body>
+</html>
