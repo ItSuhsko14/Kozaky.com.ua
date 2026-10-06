@@ -1,0 +1,29 @@
+---
+import Contacts from '../components/Contacts.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+---
+<Layout noindex title="Сторінку не знайдено | Люті козаки" description="Такої сторінки на сайті «Лютих козаків» немає." assetBase="/">
+<body>
+	<Menu assetBase="/" />
+	<Contacts />
+
+	<div class="wrapper">
+		<div class="text">
+			<h1>Сторінку не знайдено</h1>
+			<p>Можливо, адреса змінилася або в посиланні помилка. Перегляньте основні розділи сайту:</p>
+			<div class="button-wrapper">
+				<a href="/"><div class="link-btn">Головна</div></a>
+				<a href="/rozvagi/"><div class="link-btn">Козацькі розваги</div></a>
+				<a href="/kozakshow/"><div class="link-btn">Козацьке шоу</div></a>
+				<a href="/lutakuhnya/"><div class="link-btn">Козацька кухня</div></a>
+				<a href="/kozakfire/"><div class="link-btn">Вогняне шоу</div></a>
+				<a href="/kontakty/"><div class="link-btn">Контакти</div></a>
+			</div>
+
+			<Footer assetBase="/" />
+		</div>
+	</div>
+</body>
+</Layout>
