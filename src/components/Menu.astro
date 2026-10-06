@@ -1,0 +1,89 @@
+---
+interface Props {
+  assetBase: string;
+}
+
+const { assetBase } = Astro.props;
+---
+
+<link rel="stylesheet" type="text/css" href={`${assetBase}css/hamburger.css`}>
+
+
+
+<div class="menu-wrapper">
+
+  <input type="checkbox" id="burger" class="toggle-menu" />
+
+  <label class="label-menu" for="burger">
+    <p class="header-title">  
+      національне українське шоу "Люті козаки"
+    </p>
+  
+    <span></span>
+    
+  </label>
+
+  
+  <div class="menu-container">
+    <ul class="menu-box">
+      
+      <li>
+        <a class="menu-item" href="/">
+          Головна
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/rozvagi/">
+          Розваги
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/kozakshow/">
+          Виступи
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/lutakuhnya/">
+          Кухня
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/kozakfire/">
+          Вогняне
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/photo/">
+          Фото
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/video/">
+          Відео
+        </a>
+      </li>
+
+      <li>
+        <a class="menu-item" href="/news/">
+          Блог
+        </a>
+      </li>
+      
+      <li>
+        <a class="menu-item" href="/kontakty/">
+          Контакти
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+
+
