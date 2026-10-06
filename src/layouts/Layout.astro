@@ -3,12 +3,14 @@ interface Props {
   title?: string;
   description?: string;
   assetBase: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Люті козаки — козацьке шоу у Дніпрі',
   description = 'Національне українське шоу «Люті козаки» у Дніпрі.',
   assetBase,
+  noindex = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
@@ -16,8 +18,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable="no">
-    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'}>
     <title>{title}</title>
     <meta name="description" content={description}>
     <link rel="canonical" href={canonical}>
