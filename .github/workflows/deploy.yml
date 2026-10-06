@@ -15,6 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Build site
+        run: |
+          npm ci
+          npm run build
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
@@ -25,9 +35,5 @@ jobs:
       - name: Upload files
         run: |
           rsync -rltvz --chmod=D755,F644 \
-            --exclude='.git/' \
-            --exclude='.github/' \
-            --exclude='.docs/' \
-            --exclude='*.code-workspace' \
             -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
-            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:public_html/"
+            dist/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:public_html/"

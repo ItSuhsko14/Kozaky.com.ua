@@ -1,0 +1,55 @@
+---
+import Contacts from '../components/Contacts.astro';
+import Gallery from '../components/Gallery.astro';
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+---
+<Layout assetBase="/">
+<body>
+
+		<!-- Include menu.php block -->
+		<Menu assetBase="/" />
+
+		<!-- Include menu.php block -->
+		<Contacts />
+
+
+<div class="wrapper">
+	<h1> Свято в козацькому стилі </h1>
+
+	<p>
+		Ми готові організувати для Вас всі розділи свята, в які можуть входити наші послуги:
+		</p><ul>
+			<li><a href="/kozakshow/">козацькі виступи;</a></li>
+			<li><a href="/rozvagi/">розваги;</a></li>
+			<li><a href="/lutakuhnya/">люта кухня;</a></li>
+			<li><a href="/kozakfire/">вогняна вистава.</a></li>
+		</ul>
+	<p>
+		А також організувати послуги підрядників, які необхідні для повноцінного свята: музична апаратура, сцена, сценарій, музичні колективи, артисти, транспорт, тощо.
+	</p>
+	<p></p>
+	
+	<!--фото галереї -->
+	<div class="gallery">
+		<img src="/img/luti32.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti41.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti42.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti43.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti44.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti45.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti46.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti47.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti48.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti49.jpg" alt="люті козаки" class="img-small">
+	</div>
+
+	<!-- Вживляємо галерею -->
+	<Gallery assetBase="/" />	
+
+</div>
+	
+	
+
+</body>
+</Layout>

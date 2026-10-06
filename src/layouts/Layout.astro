@@ -1,0 +1,49 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  assetBase: string;
+}
+
+const {
+  title = 'Люті козаки — козацьке шоу у Дніпрі',
+  description = 'Національне українське шоу «Люті козаки» у Дніпрі.',
+  assetBase,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable="no">
+    <meta name="robots" content="index,follow">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <link rel="canonical" href={canonical}>
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Люті козаки">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content={canonical}>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={`${assetBase}сss/swiper-bundle.css`}>
+    <link rel="stylesheet" href="/сss/style.css">
+    <link rel="stylesheet" href={`${assetBase}сss/main.css`}>
+    <link rel="stylesheet" href="/сss/articles.css">
+    <link rel="stylesheet" href="/сss/hamburger.css">
+    <link rel="stylesheet" href="/сss/photogallery.css">
+    <link rel="stylesheet" href="/сss/kartka-rozvag.css">
+    <link rel="stylesheet" href={`${assetBase}сss/lutishably.css`}>
+    <script is:inline src="https://kit.fontawesome.com/d52f45beee.js" crossorigin="anonymous" defer></script>
+    <script is:inline type="application/ld+json">
+    {"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://kozaky.com.ua/#organization","name":"Люті козаки","url":"https://kozaky.com.ua/","telephone":"+380676309342","address":{"@type":"PostalAddress","addressLocality":"Дніпро","addressCountry":"UA"},"sameAs":["https://www.instagram.com/a.lutiy","https://www.facebook.com/lutikozaki","https://t.me/ALutiy","https://www.tiktok.com/@a.lutiy"]}
+    </script>
+</head>
+<slot />
+</html>

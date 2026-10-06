@@ -1,0 +1,47 @@
+---
+import Article1Preview from '../components/Article1Preview.astro';
+import Article2Preview from '../components/Article2Preview.astro';
+import Article3Preview from '../components/Article3Preview.astro';
+import Contacts from '../components/Contacts.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+---
+<Layout assetBase="/">
+<body>
+
+		<!-- Include menu.php block -->
+		<Menu assetBase="/" />
+
+		<!-- Include menu.php block -->
+		<Contacts />
+
+
+<div class="wrapper">
+
+	<header>
+		<h1>Козацькі новини</h1>
+	</header>
+
+	<div class="news-wrapper">
+
+	<!-- Вставка статті -->
+	<Article3Preview />
+
+	<!-- Вставка статті1 -->
+	<Article1Preview />
+
+	<!-- Вставка статті -->
+	<Article2Preview />
+	</div>
+
+</div>
+
+		<!-- Вставка footer.php -->
+		<Footer assetBase="/" />
+
+
+
+
+</body>
+</Layout>

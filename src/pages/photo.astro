@@ -1,0 +1,61 @@
+---
+import Contacts from '../components/Contacts.astro';
+import Gallery from '../components/Gallery.astro';
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+---
+<Layout assetBase="/">
+<body>
+
+		<!-- Include menu.php block -->
+		<Menu assetBase="/" />
+
+		<!-- Include menu.php block -->
+		<Contacts />
+
+
+<div class="wrapper">
+	
+	
+	<h1> Наші фото </h1>
+
+	<p>
+		Найбільш актуальні фото дивіться в нашому інстаграм.
+	</p>
+	<div class="btn-wrapper">
+		<a href="http://Instagram.com/a.lutiy" target="_blank">
+			<div class="link-btn">
+				Instagram.com/a.lutiy
+			</div>
+		</a>
+	</div>
+
+	
+
+
+	<!--фото галереї -->
+	<div class="gallery">
+		<img src="/img/luti32.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti41.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti42.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti43.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti44.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti45.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti46.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti47.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti48.jpg" alt="люті козаки" class="img-small">
+		<img src="/img/luti49.jpg" alt="люті козаки" class="img-small">
+	</div>
+
+	
+
+</div>
+
+
+	<!-- Вживляємо галерею -->
+	<Gallery assetBase="/" />	
+	
+	
+
+</body>
+</Layout>
