@@ -1,4 +1,6 @@
 ---
+import OrderButtons from '../components/OrderButtons.astro';
+import RelatedPages from '../components/RelatedPages.astro';
 import Contacts from '../components/Contacts.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
@@ -59,6 +61,11 @@ import Menu from '../components/Menu.astro';
 
 
 		<!-- Вставка footer.php -->
+	<div class="text">
+		<OrderButtons heading="Замовити виставку «Люті шаблі»" />
+		<RelatedPages label="Також може бути цікаво:" paths={["/kozakshow/", "/rozvagi/"]} />
+	</div>
+
 		<Footer assetBase="/" />
 		
 	

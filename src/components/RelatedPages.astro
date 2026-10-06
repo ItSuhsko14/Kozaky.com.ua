@@ -1,0 +1,13 @@
+---
+import { siteStructure } from '../data/siteStructure';
+
+interface Props {
+  label: string;
+  paths: string[];
+}
+
+const { label, paths } = Astro.props;
+---
+<p>{label} {paths.map((path, index) => (
+	<>{index > 0 && ' · '}<a href={path}>{siteStructure[path].name}</a></>
+))}</p>

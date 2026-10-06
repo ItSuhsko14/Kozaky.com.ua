@@ -1,0 +1,13 @@
+---
+interface Props {
+  heading: string;
+}
+
+const { heading } = Astro.props;
+---
+<h2>{heading}</h2>
+<p>Напишіть нам у Telegram або Viber, щоб обговорити дату й місце проведення події.</p>
+<div class="button-wrapper">
+	<a href="https://t.me/ALutiy" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити в Telegram</div></a>
+	<a href="https://viber.click/380676309342" target="_blank" rel="noopener noreferrer"><div class="link-btn">Замовити у Viber</div></a>
+</div>
