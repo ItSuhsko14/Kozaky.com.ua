@@ -1,0 +1,9 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^links\.php$ /kontakty/ [R=301,L]
+RewriteRule ^price\.php$ /price/ [R=301,L]
+RewriteRule ^(price|pricek|links)/index\.php$ /$1/ [R=301,L]
+RewriteRule ^([a-z0-9-]+)\.php$ /$1/ [R=301,L]
