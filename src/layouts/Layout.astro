@@ -1,4 +1,6 @@
 ---
+import { getBreadcrumbTrail, siteStructure } from '../data/siteStructure';
+
 interface Props {
   title?: string;
   description?: string;
@@ -13,6 +15,50 @@ const {
   noindex = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const organizationId = 'https://kozaky.com.ua/#organization';
+const pageNode = siteStructure[Astro.url.pathname];
+const breadcrumbTrail = getBreadcrumbTrail(Astro.url.pathname);
+
+const organization = {
+  '@type': 'EntertainmentBusiness',
+  '@id': organizationId,
+  name: 'Люті козаки',
+  url: 'https://kozaky.com.ua/',
+  telephone: '+380676309342',
+  address: { '@type': 'PostalAddress', addressLocality: 'Дніпро', addressCountry: 'UA' },
+  areaServed: { '@type': 'City', name: 'Дніпро' },
+  sameAs: [
+    'https://www.instagram.com/a.lutiy',
+    'https://www.facebook.com/lutikozaki',
+    'https://www.youtube.com/@lutykozaky',
+    'https://t.me/ALutiy',
+    'https://www.tiktok.com/@a.lutiy',
+  ],
+};
+
+const breadcrumbList = breadcrumbTrail.length > 1 && {
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbTrail.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.name,
+    item: new URL(crumb.path, Astro.site).href,
+  })),
+};
+
+const service = pageNode?.service && {
+  '@type': 'Service',
+  name: pageNode.name,
+  description,
+  url: canonical,
+  provider: { '@id': organizationId },
+  areaServed: pageNode.service.cities.map((city) => ({ '@type': 'City', name: city })),
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [organization, breadcrumbList, service].filter(Boolean),
+};
 ---
 <!doctype html>
 <html lang="uk">
@@ -43,9 +89,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <link rel="stylesheet" href="/сss/kartka-rozvag.css">
     <link rel="stylesheet" href={`${assetBase}сss/lutishably.css`}>
     <script is:inline src="https://kit.fontawesome.com/d52f45beee.js" crossorigin="anonymous" defer></script>
-    <script is:inline type="application/ld+json">
-    {"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://kozaky.com.ua/#organization","name":"Люті козаки","url":"https://kozaky.com.ua/","telephone":"+380676309342","address":{"@type":"PostalAddress","addressLocality":"Дніпро","addressCountry":"UA"},"sameAs":["https://www.instagram.com/a.lutiy","https://www.facebook.com/lutikozaki","https://t.me/ALutiy","https://www.tiktok.com/@a.lutiy"]}
-    </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 </head>
 <slot />
 </html>
