@@ -11,6 +11,7 @@ let index = 0;
 
 const activeSlide = n => {
   mainImg.src=btnImg[n].src;
+  mainImg.alt=btnImg[n].alt;
   console.log(n);
 }
 
@@ -52,7 +53,9 @@ function makeModal() {
 for (let i=0; i<btnImg.length; i++) {
   btnImg[i].addEventListener('click', () => {
     console.log(btnImg[i]);
+    index = i;
     mainImg.src=btnImg[i].src;
+    mainImg.alt=btnImg[i].alt;
     makeModal();
   });
 }
