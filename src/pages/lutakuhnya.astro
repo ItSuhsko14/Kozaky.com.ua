@@ -1,4 +1,6 @@
 ---
+import OrderButtons from '../components/OrderButtons.astro';
+import RelatedPages from '../components/RelatedPages.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
@@ -106,6 +108,13 @@ import Menu from '../components/Menu.astro';
     <script is:inline src="/script.js"></script>
 
 	<!-- Include footer.php block -->
+<div class="wrapper">
+	<div class="text">
+		<OrderButtons heading="Замовити козацьку кухню" />
+		<RelatedPages label="Також може бути цікаво:" paths={["/kozakshow/", "/rozvagi/", "/kozakfire/", "/sviato/"]} />
+	</div>
+</div>
+
 	<Footer assetBase="/" />
 
 
