@@ -9,5 +9,5 @@ interface Props {
 const { label, paths } = Astro.props;
 ---
 <p>{label} {paths.map((path, index) => (
-	<>{index > 0 && ' · '}<a href={path}>{siteStructure[path].name}</a></>
+	<>{index > 0 && ' · '}<a class="text-link" href={path}>{siteStructure[path].name}</a></>
 ))}</p>

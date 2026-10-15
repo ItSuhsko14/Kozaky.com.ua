@@ -138,6 +138,20 @@ a:hover {
    } 
 
 
+.text-link,
+.text-link:link,
+.text-link:visited {
+	color: #910808;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.text-link:hover {
+	color: #5c0505;
+	text-decoration: underline;
+}
+
+
 /* --- Блок іконок --- */
 
 .contacts {
@@ -213,6 +227,17 @@ a:hover {
 	height: 100%;
 }
 
+.swiper-square {
+	padding-bottom: 40px;
+	margin-bottom: 64px;
+}
+
+.swiper-square img {
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+}
+
 .swiper-pagination {
 }
 
@@ -276,6 +301,10 @@ p {
 
 
 /* --- відео --- */
+.section-gap {
+	margin-bottom: 64px;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
