@@ -72,8 +72,14 @@ h2 {
 	width: 100%;
 }
 
-ul + h2 {
-	margin-top: 2vw;
+.text > h2 {
+	margin-top: 1.25em;
+	margin-bottom: 0.4em;
+}
+
+.text > h2 + p,
+.text > h2 + ul {
+	margin-top: 0;
 }
 
 .page-brand {
