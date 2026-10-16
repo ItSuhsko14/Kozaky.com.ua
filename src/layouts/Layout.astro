@@ -27,6 +27,7 @@ const organization = {
   '@id': organizationId,
   name: 'Люті козаки',
   url: 'https://kozaky.com.ua/',
+  logo: 'https://kozaky.com.ua/logo.png',
   image: defaultPreviewImageUrl,
   telephone: '+380676309342',
   address: { '@type': 'PostalAddress', addressLocality: 'Дніпро', addressCountry: 'UA' },
@@ -73,6 +74,9 @@ const structuredData = {
     <title>{title}</title>
     <meta name="description" content={description}>
     <link rel="canonical" href={canonical}>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
