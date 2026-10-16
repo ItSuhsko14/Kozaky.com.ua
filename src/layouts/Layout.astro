@@ -1,5 +1,5 @@
 ---
-import { getBreadcrumbTrail, siteStructure } from '../data/siteStructure';
+import { getBreadcrumbTrail, getPreviewImageName, previewImageSize, siteStructure } from '../data/siteStructure';
 
 interface Props {
   title?: string;
@@ -18,12 +18,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const organizationId = 'https://kozaky.com.ua/#organization';
 const pageNode = siteStructure[Astro.url.pathname];
 const breadcrumbTrail = getBreadcrumbTrail(Astro.url.pathname);
+const previewImageUrl = new URL(`/preview/${getPreviewImageName(Astro.url.pathname)}.jpg`, Astro.site).href;
+const defaultPreviewImageUrl = new URL('/preview/default.jpg', Astro.site).href;
+const previewImageAlt = pageNode?.previewImage ? `${pageNode.name}. Люті козаки` : 'Учасники шоу «Люті козаки» в козацьких строях';
 
 const organization = {
   '@type': 'EntertainmentBusiness',
   '@id': organizationId,
   name: 'Люті козаки',
   url: 'https://kozaky.com.ua/',
+  image: defaultPreviewImageUrl,
   telephone: '+380676309342',
   address: { '@type': 'PostalAddress', addressLocality: 'Дніпро', addressCountry: 'UA' },
   areaServed: { '@type': 'City', name: 'Дніпро' },
@@ -76,6 +80,12 @@ const structuredData = {
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
     <meta property="og:url" content={canonical}>
+    <meta property="og:image" content={previewImageUrl}>
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content={String(previewImageSize.width)}>
+    <meta property="og:image:height" content={String(previewImageSize.height)}>
+    <meta property="og:image:alt" content={previewImageAlt}>
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
