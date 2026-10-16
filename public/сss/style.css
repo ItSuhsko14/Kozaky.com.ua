@@ -72,6 +72,10 @@ h2 {
 	width: 100%;
 }
 
+ul + h2 {
+	margin-top: 2vw;
+}
+
 .page-brand {
 	font-family: Alegreya Sans;
 	font-size: 1.5em;
