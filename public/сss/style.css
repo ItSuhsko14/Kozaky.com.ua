@@ -9,6 +9,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+img {
+	height: auto;
+}
+
 /* Розмір основного шрифта на екрані до 320пікс */
 @media screen and (max-width: 320px) {
 	body {
