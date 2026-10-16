@@ -28,7 +28,7 @@ export const siteStructure: Record<string, PageNode> = {
   '/kozakshow/': { name: 'Козацьке шоу', parent: '/', service: servedInDnipro, previewImage: '/img/kozakshow/Luti561.webp' },
   '/programa-pokazova/': { name: 'Показово-інтерактивна програма', parent: '/kozakshow/', service: servedInDnipro, previewImage: '/img/kozakshow/Luti561.webp' },
   '/kozakfire/': { name: 'Вогняне шоу «Лютий вогонь»', parent: '/', service: servedInDnipro, previewImage: '/img/img01.webp' },
-  '/lutakuhnya/': { name: 'Козацька кухня', parent: '/', service: { cities: ['Дніпро', 'Київ'] }, previewImage: '/img/lutakuhnya/kuhnya46.webp' },
+  '/lutakuhnya/': { name: 'Виїзна кухня та кейтеринг', parent: '/', service: { cities: ['Дніпро', 'Київ'] }, previewImage: '/img/lutakuhnya/kuhnya46.webp' },
   '/kulish/': { name: 'Козацький куліш на свято', parent: '/lutakuhnya/', service: { cities: ['Дніпро', 'Київ'] }, previewImage: '/img/lutakuhnya/kuhnya9.webp' },
   '/sviato/': { name: 'Свято в козацькому стилі', parent: '/', service: servedInDnipro, previewImage: '/img/luti46.webp' },
   '/kolodiy/': { name: 'Масляна від Лютих козаків', parent: '/', service: servedInDnipro, previewImage: '/img/kolodiy/lutiKolodiyShow.webp' },
