@@ -1,0 +1,98 @@
+---
+import { youTubeVideos } from '../data/videos';
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+const video = youTubeVideos[id];
+if (!video) {
+  throw new Error(`Unknown YouTube video ${id}, add it to src/data/videos.ts`);
+}
+
+const thumbnailUrl = `https://i.ytimg.com/vi_webp/${id}/sddefault.webp`;
+const embedUrl = `https://www.youtube.com/embed/${id}`;
+const minutes = Math.floor(video.durationSeconds / 60);
+const seconds = video.durationSeconds % 60;
+
+const videoObject = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: video.title,
+  description: video.title,
+  thumbnailUrl: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+  uploadDate: video.uploadDate,
+  duration: `PT${minutes}M${seconds}S`,
+  embedUrl,
+  url: `https://www.youtube.com/watch?v=${id}`,
+};
+---
+<button type="button" class="youtube-facade" data-embed-url={embedUrl} data-title={video.title} aria-label={`Дивитися відео «${video.title}»`}>
+	<img src={thumbnailUrl} alt="" width="640" height="480" loading="lazy" decoding="async">
+	<svg class="youtube-facade-play" viewBox="0 0 68 48" aria-hidden="true">
+		<rect width="68" height="48" rx="12" />
+		<path d="M27 14v20l18-10z" />
+	</svg>
+</button>
+<script is:inline type="application/ld+json" set:html={JSON.stringify(videoObject)} />
+
+<style>
+	.youtube-facade {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		border: 0;
+		background: #000;
+		cursor: pointer;
+	}
+
+	.youtube-facade img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.youtube-facade-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 68px;
+		height: 48px;
+		transform: translate(-50%, -50%);
+	}
+
+	.youtube-facade-play rect {
+		fill: #212121;
+		fill-opacity: 0.8;
+		transition: fill 0.2s, fill-opacity 0.2s;
+	}
+
+	.youtube-facade-play path {
+		fill: #fff;
+	}
+
+	.youtube-facade:hover .youtube-facade-play rect,
+	.youtube-facade:focus-visible .youtube-facade-play rect {
+		fill: #f00;
+		fill-opacity: 1;
+	}
+</style>
+
+<script>
+	function replaceFacadeWithPlayer(facade: HTMLButtonElement) {
+		const player = document.createElement('iframe');
+		player.src = `${facade.dataset.embedUrl}?autoplay=1`;
+		player.title = facade.dataset.title ?? '';
+		player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		player.allowFullscreen = true;
+		facade.replaceWith(player);
+		player.focus();
+	}
+
+	document.querySelectorAll<HTMLButtonElement>('.youtube-facade').forEach((facade) => {
+		facade.addEventListener('click', () => replaceFacadeWithPlayer(facade), { once: true });
+	});
+</script>
