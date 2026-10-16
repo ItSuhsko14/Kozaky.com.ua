@@ -1,0 +1,59 @@
+---
+import Contacts from '../components/Contacts.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import OrderButtons from '../components/OrderButtons.astro';
+import RelatedPages from '../components/RelatedPages.astro';
+---
+<Layout title="Гриль і барбекю на виїзд у Дніпрі та Києві | Люті козаки" description="Хочете шашлик на свято? Запропонуємо гриль на вугіллі: курка, свинячий ошийок, ковбаски й овочі, приготовані на місці. Виїжджаємо в Дніпрі й Києві." assetBase="/">
+<body>
+	<Menu assetBase="/" />
+	<Contacts />
+
+	<div class="wrapper">
+		<div class="text">
+			<h1>Гриль і барбекю на виїзд</h1>
+			<p>Шукаєте шашлик на природу чи на свято? Запропонуємо вам більше: гриль на вугіллі від «Лютої кухні». Приїдемо з великим грилем, розпалимо вугілля й приготуємо курку, свинячий ошийок, ковбаски та овочі просто при гостях.</p>
+
+			<div class="swiper swiper-square">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya58.webp" width="1080" height="1080" alt="Козак готує м'ясо на великому грилі над вугіллям"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya57.webp" width="1080" height="1080" alt="Меню гриль і садж: ковбаски, картопля, гриби й овочі"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya12.webp" width="800" height="533" alt="Великий гриль на вугіллі"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya39.webp" width="800" height="800" alt="Гриби й перець, смажені на саджі"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya4.webp" width="800" height="533" alt="Овочі садж: картопля, кабачки, баклажани, помідори, перець і гриби"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya26.webp" width="800" height="800" alt="Перець, кабачки й помідори на саджі"></div>
+					<div class="swiper-slide"><img src="/img/lutakuhnya/kuhnya21.webp" width="800" height="533" alt="Вогонь під грилем: уся їжа готується на дровах і вугіллі"></div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<h2>Що готуємо на грилі</h2>
+			<ul>
+				<li>курку;</li>
+				<li>свинячий ошийок;</li>
+				<li>ковбаски;</li>
+				<li>овочі, гриби й картоплю на грилі та саджі.</li>
+			</ul>
+
+			<h2>Гриль замість шампурів</h2>
+			<p>Замість шампурів у нас великий гриль. На ньому водночас готуються м'ясо, курка, ковбаски й овочі, тож на столі одразу є різні страви, і кожен гість обирає своє.</p>
+
+			<h2>Удома, на дачі, на турбазі чи на природі</h2>
+			<p>Привеземо гриль і все потрібне туди, де ви святкуєте, і готуватимемо на місці, тож м'ясо потрапляє на стіл просто з вогню. Працюємо в Дніпрі та Києві.</p>
+
+			<h2>Доповніть гриль</h2>
+			<p>До гриля можна замовити <a class="text-link" href="/kulish/">козацький куліш</a> чи борщ із казана: <a class="text-link" href="/lutakuhnya/">дивіться все меню виїзної кухні</a>. А для колориту додайте до свята <a class="text-link" href="/kozakshow/">козацьке шоу</a>.</p>
+
+			<OrderButtons heading="Замовити гриль на виїзд" />
+			<RelatedPages label="Також може бути цікаво:" paths={["/lutakuhnya/", "/kulish/", "/kozakshow/", "/sviato/"]} />
+		</div>
+	</div>
+
+	<Footer assetBase="/" />
+
+</body>
+</Layout>
