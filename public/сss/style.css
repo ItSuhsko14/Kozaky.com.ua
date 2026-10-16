@@ -72,6 +72,25 @@ h2 {
 	width: 100%;
 }
 
+.text > h2 {
+	margin-top: 1.25em;
+	margin-bottom: 0.4em;
+}
+
+.text > h2 + p,
+.text > h2 + ul {
+	margin-top: 0;
+}
+
+.page-brand {
+	font-family: Alegreya Sans;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: -0.02em;
+	margin: 0 auto;
+}
+
 h3 {
 	font-family: Alegreya Sans;
 	font-size: 1.3em;
