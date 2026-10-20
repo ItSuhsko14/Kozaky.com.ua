@@ -86,6 +86,23 @@ h2 {
 	margin-bottom: 0.4em;
 }
 
+.video-page > h2 {
+	margin-top: 1.25em;
+	margin-bottom: 0.4em;
+}
+
+.video-page > .text > p {
+	margin: 0.5em auto;
+}
+
+.video-page > h2 + .text > p:first-child {
+	margin-top: 0;
+}
+
+.video-page > .text + .video {
+	margin-top: 0.75em;
+}
+
 .page-brand {
 	font-family: Alegreya Sans;
 	font-size: 1.5em;
