@@ -452,6 +452,7 @@ p {
 .footer-wrapper {
 	max-width: 600px;
 	margin: 0 auto;
+	padding: 0 16px;
 }
 
 footer {
@@ -496,7 +497,7 @@ ul {
 
 li {
 	list-style: disc;
-	margin-left: 3vw;
+	margin-left: max(3vw, 1.25em);
 }
 
 
@@ -576,5 +577,13 @@ li {
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+@media screen and (max-width: 920px) {
+	.text,
+	.answer {
+		text-align: left;
+	}
 
-
+	.section-gap {
+		margin-bottom: 32px;
+	}
+}
