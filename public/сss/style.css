@@ -3,7 +3,6 @@
 html, body {
 	margin: 0;
 	width: 100%;
-	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	font-style: normal;
 	overflow-x: hidden;
@@ -80,6 +79,28 @@ h2 {
 .text > h2 + p,
 .text > h2 + ul {
 	margin-top: 0;
+}
+
+.video + h2 {
+	margin-top: 1.25em;
+	margin-bottom: 0.4em;
+}
+
+.video-page > h2 {
+	margin-top: 1.25em;
+	margin-bottom: 0.4em;
+}
+
+.video-page > .text > p {
+	margin: 0.5em auto;
+}
+
+.video-page > h2 + .text > p:first-child {
+	margin-top: 0;
+}
+
+.video-page > .text + .video {
+	margin-top: 0.75em;
 }
 
 .page-brand {
@@ -431,6 +452,7 @@ p {
 .footer-wrapper {
 	max-width: 600px;
 	margin: 0 auto;
+	padding: 0 16px;
 }
 
 footer {
@@ -475,7 +497,7 @@ ul {
 
 li {
 	list-style: disc;
-	margin-left: 3vw;
+	margin-left: max(3vw, 1.25em);
 }
 
 
@@ -555,5 +577,13 @@ li {
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+@media screen and (max-width: 920px) {
+	.text,
+	.answer {
+		text-align: left;
+	}
 
-
+	.section-gap {
+		margin-bottom: 32px;
+	}
+}
